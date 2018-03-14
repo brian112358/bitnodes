@@ -25,7 +25,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 """
-Bitcoin protocol access for Bitnodes.
+Ravencoin protocol access for Bitnodes.
 Reference: https://en.bitcoin.it/wiki/Protocol_specification
 
 -------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ Reference: https://en.bitcoin.it/wiki/Protocol_specification
                            protocol version >= 70001
 -------------------------------------------------------------------------------
 [---MESSAGE---]
-[ 4] MAGIC_NUMBER               (\xF9\xBE\xB4\xD9)                  uint32_t
+[ 4] MAGIC_NUMBER               (\x52\x41\x56\x4E)                  uint32_t
 [12] COMMAND                                                        char[12]
 [ 4] LENGTH                     <I (len(payload))                   uint32_t
 [ 4] CHECKSUM                   (sha256(sha256(payload))[:4])       uint32_t
@@ -151,14 +151,14 @@ from cStringIO import StringIO
 from io import SEEK_CUR
 from operator import itemgetter
 
-MAGIC_NUMBER = "\xF9\xBE\xB4\xD9"
-PORT = 8333
-MIN_PROTOCOL_VERSION = 70001
+MAGIC_NUMBER = "\x52\x41\x56\x4E"
+PORT = 8767
+MIN_PROTOCOL_VERSION = 70015
 PROTOCOL_VERSION = 70015
 FROM_SERVICES = 0
 TO_SERVICES = 1  # NODE_NETWORK
-USER_AGENT = "/bitnodes.earn.com:0.1/"
-HEIGHT = 478000
+USER_AGENT = "/rvnnodes:0.1/"
+HEIGHT = 123000
 RELAY = 0  # set to 1 to receive all txs
 
 SOCKET_BUFSIZE = 8192
@@ -955,7 +955,8 @@ class Connection(object):
 
 
 def main():
-    to_addr = ("136.243.139.96", PORT)
+    # seed-raven.ravencoin.org
+    to_addr = ("34.214.193.125", PORT)
     to_services = TO_SERVICES
 
     handshake_msgs = []

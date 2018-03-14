@@ -1,10 +1,10 @@
 [pcap]
 
 # Logfile
-logfile = log/pcap.f9beb4d9.log
+logfile = log/pcap.5241564e.log
 
 # Network magic number
-magic_number = f9beb4d9
+magic_number = 5241564e
 
 # Redis database number
 db = 0
@@ -25,4 +25,4 @@ inv_count = 1000
 tor_proxy = 127.0.0.1:9050
 
 # Relative path to directory containing pcap files
-pcap_dir = data/pcap/f9beb4d9
+pcap_dir = data/pcap/5241564e

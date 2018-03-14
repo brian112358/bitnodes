@@ -1,26 +1,21 @@
 [crawl]
 
 # Logfile
-logfile = log/crawl.f9beb4d9.log
+logfile = log/crawl.5241564e.log
 
 # Network magic number
-magic_number = f9beb4d9
+magic_number = 5241564e
 
 # Default/fallback port number
-port = 8333
+port = 8767
 
 # Redis database number
 db = 0
 
 # List of DNS seeders to get a subset of reachable nodes
 seeders =
-    dnsseed.bitcoin.dashjr.org
-    dnsseed.bluematt.me
-    seed.bitcoin.jonasschnelli.ch
-    seed.bitcoin.sipa.be
-    seed.bitcoinstats.com
-    seed.btc.petertodd.org
-    seed.bitnodes.io
+    seed-raven.ravencoin.org
+    seed-raven.bitactivate.com
 
 # Number of concurrent workers (greenlets)
 workers = 700
@@ -41,7 +36,7 @@ protocol_version = 70015
 # crawler. This is so that users will not confuse your crawler with another
 # instance that is already running and generating data for the project.
 # -----------------------------------------------------------------------------
-user_agent = /bitnodes.earn.com:0.1/
+user_agent = /rvnnodes:0.1/
 
 # Services to use for outgoing network address message
 services = 0
@@ -100,7 +95,7 @@ exclude_ipv6_networks =
 exclude_ipv4_bogons = True
 
 # Attempt to establish connection with .onion nodes
-onion = True
+onion = False
 
 # Tor proxy is required to connect to .onion address
 tor_proxy = 127.0.0.1:9050
@@ -132,4 +127,4 @@ onion_nodes =
 include_checked = False
 
 # Relative path to directory containing timestamp-prefixed JSON crawl files
-crawl_dir = data/crawl/f9beb4d9
+crawl_dir = data/crawl/5241564e
